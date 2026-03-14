@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Relatório Mensal</h2>
+
+<h4>Produção</h4>
+
+<table class="table table-bordered">
+
+<tr>
+<th>Nome</th>
+<th>Função</th>
+<th>Pares</th>
+<th>Valor</th>
+<th>Total</th>
+</tr>
+
+{% for p in producao %}
+
+<tr>
+
+<td>{{p[0]}}</td>
+<td>{{p[1]}}</td>
+<td>{{p[2]}}</td>
+<td>{{p[3]}}</td>
+<td>{{p[4]}}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<hr>
+
+<h4>Insumos</h4>
+
+<table class="table table-striped">
+
+<tr>
+<th>Insumo</th>
+<th>Valor</th>
+<th>Data</th>
+</tr>
+
+{% for i in insumos %}
+
+<tr>
+
+<td>{{i[0]}}</td>
+<td>{{i[1]}}</td>
+<td>{{i[2]}}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<h4>Total gasto em insumos: R$ {{total_insumos}}</h4>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Registrar Produção</h2>
+
+<form method="POST" class="row g-2">
+
+<div class="col-md-4">
+
+<select name="trabalhador" class="form-control">
+
+{% for t in trabalhadores %}
+
+<option value="{{t[0]}}">
+
+{{t[1]}} - {{t[2]}}
+
+</option>
+
+{% endfor %}
+
+</select>
+
+</div>
+
+<div class="col-md-4">
+
+<input name="pares" placeholder="Pares produzidos" class="form-control">
+
+</div>
+
+<div class="col-md-4">
+
+<button class="btn btn-success">
+
+Registrar
+
+</button>
+
+</div>
+
+</form>
+
+{% endblock %}
