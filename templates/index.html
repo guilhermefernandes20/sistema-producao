@@ -7,53 +7,30 @@
 <div class="row">
 
 <div class="col-md-4">
-
 <div class="card bg-primary text-white">
-
 <div class="card-body">
-
 <h5>Total Trabalhadores</h5>
-
 <h2>{{ trabalhadores|length }}</h2>
-
 </div>
-
 </div>
-
 </div>
-
 
 <div class="col-md-4">
-
 <div class="card bg-success text-white">
-
 <div class="card-body">
-
 <h5>Total Produção</h5>
-
 <h2>{{ total_producao }}</h2>
-
 </div>
-
 </div>
-
 </div>
-
 
 <div class="col-md-4">
-
 <div class="card bg-warning text-dark">
-
 <div class="card-body">
-
 <h5>Total a Pagar</h5>
-
 <h2>R$ {{ total_pagamento }}</h2>
-
 </div>
-
 </div>
-
 </div>
 
 </div>
@@ -61,7 +38,6 @@
 <br>
 
 <div class="card">
-
 <div class="card-body">
 
 <h5>Produção por Trabalhador</h5>
@@ -69,23 +45,19 @@
 <table class="table table-striped">
 
 <tr>
-
 <th>Nome</th>
 <th>Função</th>
 <th>Produção</th>
 <th>Total</th>
-
 </tr>
 
 {% for t in trabalhadores %}
 
 <tr>
-
 <td>{{t[1]}}</td>
 <td>{{t[2]}}</td>
 <td>{{t[4]}}</td>
 <td>R$ {{t[3]*t[4]}}</td>
-
 </tr>
 
 {% endfor %}
@@ -93,7 +65,6 @@
 </table>
 
 </div>
-
 </div>
 
 {% endblock %}
